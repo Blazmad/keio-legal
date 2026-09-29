@@ -1,0 +1,101 @@
+:root {
+  --screen: #ffffff;
+  --card: #f4f4f4;
+  --line: #e2e2e2;
+  --ink: #0e0e0e;
+  --ink-2: rgba(14, 14, 14, 0.62);
+  --ink-3: rgba(14, 14, 14, 0.38);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --screen: #0e0e0e;
+    --card: #161616;
+    --line: #262626;
+    --ink: #ffffff;
+    --ink-2: rgba(255, 255, 255, 0.60);
+    --ink-3: rgba(255, 255, 255, 0.32);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--screen);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 5rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0.6rem 0 0.4rem;
+}
+
+.meta { color: var(--ink-2); margin: 0 0 2.5rem; font-size: 0.95rem; }
+
+h2 {
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  margin: 3rem 0 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+h3 { font-size: 1rem; margin: 1.75rem 0 0.4rem; }
+
+p, li { color: var(--ink); }
+ul { padding-left: 1.2rem; }
+li { margin: 0.3rem 0; }
+
+a { color: var(--ink); text-underline-offset: 3px; }
+
+.lede {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  margin: 0 0 1rem;
+}
+.lede p { margin: 0.4rem 0; }
+.lede strong { font-weight: 600; }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.93rem; min-width: 32rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.65rem 0.75rem 0.65rem 0; border-bottom: 1px solid var(--line); }
+th { color: var(--ink-2); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.muted { color: var(--ink-2); }
+
+footer { margin-top: 4rem; color: var(--ink-3); font-size: 0.85rem; }
+
+.links { list-style: none; padding: 0; }
+.links li { margin: 0.75rem 0; }
+.links a {
+  display: block;
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.links span { display: block; font-weight: 400; color: var(--ink-2); font-size: 0.9rem; }
